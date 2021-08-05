@@ -5,10 +5,10 @@
   background-color: #04AA6D;
   color: white;
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
-  
+  font-family: Verdana
 }
 
 .block:hover {
@@ -20,4 +20,5 @@
 
 p {
   font-size: 24px;
+  font-family: Helvetica
 }
