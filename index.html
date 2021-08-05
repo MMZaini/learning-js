@@ -9,9 +9,18 @@
 </head>
 
 <!-- parameters for these tags are always strings. look at other examples above -->
-<button onclick="text()" id="ctbut">Click</button>
+<br>
+<center><button onclick="text()" id="ctbut" class="block">Click</button></center>
 
-<p id="clickTime">You have 0 clicks</p>
+<p style="text-align:center" id="clickTime">You have 0 clicks</p>
+
+<center><button onclick="shopToggle()" class="block">Shop</button></center>
+<br>
+<center><div onclick="buy1()" id="shopText"></div></center>
+<br><br>
+<center><p id="up1"></p></center>
+
+<!-- for both click and shop button, i dont know how to center the class in css, so im just gonna use <center>, although thats a html4 tag, therefore some browsers which dont support html4 and html5, will not work -->
 
   <body>
     <script src="script.js"></script>
