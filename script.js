@@ -1,11 +1,9 @@
 let clicks = 0
 let clickamo = 1
 let amo1 = 0
-let clickcur = 0
 
 function text() {
   let line = "You have " + clicks + " clicks"
-  clickcur = clicks
   clicks = clicks + clickamo
   document.getElementById("clickTime").innerHTML = line
 }
@@ -20,15 +18,14 @@ function shopToggle() {
 }
 
 function buy1() {
-  if (clickcur < 15) {
+  if (clicks < 15) {
    console.log("User does not have enough clicks! He has " + clickcur + " Clicks")
   }
 
 
-  if (clickcur >= 15) {
-   clickcur = clicks - 16
+  if (clicks >= 15) {
    clicks = clicks - 16
-   line = "You have " + clickcur + " clicks"
+   line = "You have " + clicks + " clicks"
    // clickamo = clickamo + 1
    amo1 = amo1 + 1
    document.getElementById("clickTime").innerHTML = line
