@@ -8,26 +8,26 @@ price1 = multiplier1
 
 function text() {
   clicks = clicks + clickamo
-  let line = "You have " + clicks + " clicks"
+  let line = "You have " + clicks.toFixed(1) + " clicks"
   document.getElementById("clickTime").innerHTML = line
 }
 
 function shopToggle() {
   let x = document.getElementById("shopText");
   if (x.innerHTML === "") {
-    x.innerHTML = "1. Powerful Clicks - Price = " + price1 + " - Increases purchasing power by 1";
+    x.innerHTML = "1. Powerful Clicks - Price = " + price1.toFixed(1) + " - Increases purchasing power by 1";
   } else {
     x.innerHTML = "";
   }
 }
 
 function buy1() {
-  if (clicks < price1) {
-    console.log("User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1 + " clicks!")
-   }
-    else {
+  if (clicks < price1)
+    console.log("User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1.toFixed(1) + " clicks!")
+
+  else {
     clicks = clicks - price1
-    line = "You have " + clicks + " clicks"
+    line = "You have " + clicks.toFixed(1) + " clicks"
     multiplier1 = 1.25 * price1
     price1 = multiplier1
     shopToggle()
@@ -36,8 +36,5 @@ function buy1() {
     clickamo = clickamo + 1
     document.getElementById("clickTime").innerHTML = line
     document.getElementById("up1").innerHTML = "You have " + amo1 + " 'Powerful Clicks' Upgrades"
-
-
   }
-
 }
