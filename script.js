@@ -13,7 +13,7 @@ function text() {
 }
 
 function shopToggle() {
-  var x = document.getElementById("shopText");
+  let x = document.getElementById("shopText");
   if (x.innerHTML === "") {
     x.innerHTML = "1. Powerful Clicks - Price = " + price1 + " - Increases purchasing power by 1";
   } else {
@@ -23,12 +23,15 @@ function shopToggle() {
 
 function buy1() {
   if (clicks < price1) {
-    console.log("User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1 + "clicks! He needs " + price1 - clicks + "more clicks!")
-  } else {
+    console.log("User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1 + " clicks!")
+   }
+    else {
     clicks = clicks - price1
     line = "You have " + clicks + " clicks"
-    multiplier1 = price1 / 4 + price1 
+    multiplier1 = 1.25 * price1
     price1 = multiplier1
+    shopToggle()
+    shopToggle()
     amo1 = amo1 + 1
     clickamo = clickamo + 1
     document.getElementById("clickTime").innerHTML = line
