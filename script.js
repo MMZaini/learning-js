@@ -26,8 +26,8 @@ function buy1() {
   if (clicks >= 15) {
    clicks = clicks - 16
    line = "You have " + clicks + " clicks"
-   // clickamo = clickamo + 1
    amo1 = amo1 + 1
+   // clickamo = clickamo + 1
    document.getElementById("clickTime").innerHTML = line
    document.getElementById("up1").innerHTML = "You have " + amo1 + " 'Powerful Clicks' Upgrades"
    }
