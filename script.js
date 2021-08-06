@@ -26,7 +26,7 @@ function buy1() {
     console.log("User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1.toFixed(1) + " clicks!")
 
   else {
-    clicks = clicks - price1
+    clicks = clicks - price1.toFixed(0)
     line = "You have " + clicks.toFixed(1) + " clicks"
     multiplier1 = 1.45 * price1
     price1 = multiplier1
