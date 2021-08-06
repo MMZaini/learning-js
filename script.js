@@ -3,7 +3,7 @@ let clickamo = 1
 let AmountPowerfulClicks = 0
 
 let price1 = 15
-let multiplier1 = price1 / 4 + price1
+let multiplier1 = 1.45 * price1
 price1 = multiplier1
 
 function text() {
@@ -28,7 +28,7 @@ function buy1() {
   else {
     Clicks = Clicks - price1
     line = "You have " + Clicks.toFixed(1) + " Clicks"
-    multiplier1 = 1.25 * price1
+    multiplier1 = 1.45 * price1
     price1 = multiplier1
     shopToggle()
     shopToggle()
