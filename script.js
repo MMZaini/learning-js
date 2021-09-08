@@ -22,13 +22,12 @@ function shopToggle() {
 }
 
 function buy1() {
-  if (clicks < price1)
-    console.log("User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1.toFixed(1) + " clicks!")
-
-  else {
+  if (clicks < price1) {
+    document.getElementById("error").innerText = "User does not have enough clicks! He has " + clicks + " clicks! He needs " + price1.toFixed(1) + " clicks!"
+  } else {
     clicks = clicks - price1.toFixed(0)
     line = "You have " + clicks.toFixed(1) + " clicks"
-    multiplier1 = 1.45 * price1
+    multiplier1 = 1.10 * price1
     price1 = multiplier1
     shopToggle()
     shopToggle()
